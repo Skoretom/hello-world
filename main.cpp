@@ -2,32 +2,27 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
+    int vstup = 0; //inicializace
 
-    cout << "Ahoj, jak se máš." << endl;
+    cout << "Stiskni 0 nebo 1: ";
+    cin >> vstup;
 
-    int celeCislo = 12300000000;
+    if (vstup == 0){ //<, >, <=, >=, ==, && ||
+          cout << "Nula!" << endl;
+    }else if(vstup == 1) {
+        cout << "Jedna!" << endl;
+    }else{
+        cout << "F!" << endl;
+    }
+        //Prepinac
 
-    int a = 3;
-    double realneCislo = double(a) / celeCislo;
+        switch(vstup){
+            case 0: cout << "Nula ze switche!"; break;
+            case 1: cout << "Jednicka ze switche!"; break;
+            default: cout << "F dezo!"; break;
+        }
 
-    char znak = 'd';
-    string retezec = "Toto je retezec.";
-
-    int mojePole[3] = {1, 5, 8};
-    char poleZnaku [] = {'a', 'b', 'c'};
-
-    bool start = 0;
-    start = true; //1
-    start = false;  //0
-
-    cout << "3/2 = " << celeCislo << endl;
-    cout << "Velikost int = " << sizeof(int) << endl;
-    cout << "Znak = " << znak << endl;
-    cout << "Retezec = " << retezec << endl;
-    cout << "2. slozka pole = " << mojePole [1] << endl;
-    cout << "2. slozka poleZnaku = " << poleZnaku [2] << endl;
-    cout << "bool = " << start << endl;
-
-    return 0;
+        return 0;
 }
